@@ -1,0 +1,10 @@
+services:
+    apple-music-downloader:
+        container_name: "apple-music-downloader"
+        build:
+            context: .
+        volumes:
+            - ./config.ini:/var/gamdl/config.ini
+            - ./cookies.txt:/var/gamdl/cookies.txt
+            - ./download_list.txt:/var/gamdl/download_list.txt
+            - ./downloads:/var/gamdl/downloads
